@@ -39,28 +39,33 @@ public class ContainerGenerator : ISourceGenerator
                                      using System.Collections.Generic;
                                      using ACCR;
                                      
-                                     public partial class {{classSymbol.Name}} : {{containerInterface}}
+                                     namespace {{classSymbol.ContainingNamespace?.ToDisplayString()}}
                                      {
-                                         public Dictionary<Type, {{aspectInterface}}> Aspects {get; set;}
-                                         {{GenerateAspectScriptableObjectFields(aspects)}}
-                                         
-                                         public void Initialize()
+                                         public partial class {{classSymbol.Name}} : {{containerInterface}}
                                          {
-                                            Aspects = new Dictionary<Type, {{aspectInterface}}>();
-                                            {{GenerateAspectInitializations(aspects)}}
+                                             public string Id {get; set;}
+                                             public Dictionary<Type, {{aspectInterface}}> Aspects {get; set;}
+                                             {{GenerateAspectScriptableObjectFields(aspects)}}
+                                             
+                                             public void Initialize(string id)
+                                             {
+                                                Id = id;
+                                                Aspects = new Dictionary<Type, {{aspectInterface}}>();
+                                                {{GenerateAspectFieldInitializations(aspects)}}
+                                             }
+                                             
+                                             public T GetAspect<T>() where T : struct
+                                             {
+                                                return Aspects.ContainsKey(typeof(T)) ? (T)Aspects[typeof(T)] : default(T);
+                                             }
+                                             
+                                             public Dictionary<Type, {{aspectInterface}}> GetAllAspects()
+                                             {
+                                                return Aspects;
+                                             }
+                                             
+                                             {{GenerateAspectUpdaters(aspects)}}
                                          }
-                                         
-                                         public T GetAspect<T>() where T : struct
-                                         {
-                                            return Aspects.ContainsKey(typeof(T)) ? (T)Aspects[typeof(T)] : default(T);
-                                         }
-                                         
-                                         public Dictionary<Type, {{aspectInterface}}> GetAllAspects()
-                                         {
-                                            return Aspects;
-                                         }
-                                         
-                                         {{GenerateAspectUpdaters(aspects)}}
                                      }
                                      """;
             context.AddSource($"{classSymbol.Name}.g.cs", generatedCode);
@@ -89,18 +94,20 @@ public class ContainerGenerator : ISourceGenerator
         var builder = new StringBuilder();
         foreach (var field in aspects)
         {
-            builder.AppendLine($"public so{field.Type} {field.Name}Data;");
+            var fieldNameSplitByDotNotation = field.Name.Split('.');
+            builder.AppendLine($"public so{fieldNameSplitByDotNotation.LastOrDefault()} {field.Name}Data;");
         }
         return builder.ToString();
     }
 
-    private string GenerateAspectInitializations(List<IFieldSymbol> aspects)
+    private string GenerateAspectFieldInitializations(List<IFieldSymbol> aspects)
     {
         var builder = new StringBuilder();
         foreach (var field in aspects)
         {
-            builder.AppendLine($"this.{field.Name} = new {field.Type}();");
-            builder.AppendLine($"this.{field.Name}.Initialize<so{field.Type}>(this, {field.Name}Data);");
+            var fieldNameSplitByDotNotation = field.Name.Split('.');
+            builder.AppendLine($"{field.Name} = new {field.Type}();");
+            builder.AppendLine($"{field.Name}.Initialize<so{fieldNameSplitByDotNotation.LastOrDefault()}>(this, {field.Name}Data);");
             builder.AppendLine($"Aspects[typeof({field.Type})] = {field.Name};");
         }
         return builder.ToString();

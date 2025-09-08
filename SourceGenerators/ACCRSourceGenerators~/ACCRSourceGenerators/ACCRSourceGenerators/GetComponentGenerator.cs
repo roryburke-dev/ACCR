@@ -69,7 +69,7 @@ public class GetComponentGenerator : ISourceGenerator
         ISymbol attributeSymbol)
     {
         var source = new StringBuilder($$"""
-
+                                         using {{classSymbol.ContainingNamespace?.ToDisplayString()}};
 
                                          public partial class {{classSymbol.Name}} 
                                          {

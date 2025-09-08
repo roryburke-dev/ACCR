@@ -14,7 +14,7 @@ public class StateGenerator : ISourceGenerator
     private const string _attribute = """
                                           using System;
 
-                                          [AttributeUsage(AttributeTargets.Class, Inherited = true, AllowMultiple = false)]
+                                          [AttributeUsage(AttributeTargets.Class | AttributeTargets.Field, Inherited = true, AllowMultiple = false)]
                                           internal class StateAttribute : Attribute { }
                                           
                                           [AttributeUsage(AttributeTargets.Method, Inherited = true, AllowMultiple = false)]
@@ -38,6 +38,7 @@ public class StateGenerator : ISourceGenerator
         if (context.SyntaxContextReceiver is not StateSyntaxReceiver receiver)
             return;
         var stateInterface = context.Compilation.GetTypeByMetadataName("Utils.IState");
+        var coordinatorInterface = context.Compilation.GetTypeByMetadataName("ACCR.ICoordinator");
         foreach (var classSymbol in receiver.States)
         {
             var enterMethods = receiver.EnterMethods[classSymbol];
@@ -50,40 +51,45 @@ public class StateGenerator : ISourceGenerator
                                      using ACCR;
                                      using Utils;
                                      
-                                     public partial class {{classSymbol.Name}} : {{stateInterface}} 
+                                     namespace {{classSymbol.ContainingNamespace?.ToDisplayString()}}
                                      {
-                                          public event EnterEventHandler OnEnter;
-                                          public event ExecuteEventHandler OnExecute;
-                                          public event ExitEventHandler OnExit;
-                                          
-                                          public {{classSymbol.Name}}() 
-                                          {
-                                            {{GenerateEventInitializations(enterMethods, executeMethods, exitMethods)}}
-                                          }
-                                          
-                                          public void Enter()
-                                          {
-                                              if(OnEnter is not null)
+                                         public partial class {{classSymbol.Name}} : {{stateInterface}} 
+                                         {
+                                              public {{coordinatorInterface}} Coordinator {get; set;}
+                                              public event EnterEventHandler OnEnter;
+                                              public event ExecuteEventHandler OnExecute;
+                                              public event ExitEventHandler OnExit;
+                                              
+                                              public {{classSymbol.Name}}({{coordinatorInterface}} coordinator) 
                                               {
-                                                 OnEnter(this, EventArgs.Empty);
+                                                  Coordinator = coordinator;
+                                                  {{GenerateEventInitializations(enterMethods, executeMethods, exitMethods)}}
                                               }
-                                          }
-                                          
-                                          public void Execute()
-                                          {
-                                              if(OnExecute is not null)
+                                              
+                                              public void Enter()
                                               {
-                                                 OnExecute(this, EventArgs.Empty);
+                                                  if(OnEnter is not null)
+                                                  {
+                                                     OnEnter(this, EventArgs.Empty);
+                                                  }
                                               }
-                                          }
-                                          
-                                          public void Exit()
-                                          {
-                                              if(OnExit is not null)
+                                              
+                                              public void Execute()
                                               {
-                                                 OnExit(this, EventArgs.Empty);
+                                                  if(OnExecute is not null)
+                                                  {
+                                                     OnExecute(this, EventArgs.Empty);
+                                                  }
                                               }
-                                          }
+                                              
+                                              public void Exit()
+                                              {
+                                                  if(OnExit is not null)
+                                                  {
+                                                     OnExit(this, EventArgs.Empty);
+                                                  }
+                                              }
+                                         }
                                      }
                                      """;
 

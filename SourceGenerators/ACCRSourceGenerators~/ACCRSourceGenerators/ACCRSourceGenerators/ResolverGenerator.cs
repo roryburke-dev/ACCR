@@ -43,65 +43,68 @@ public class ResolverGenerator : ISourceGenerator
                                      using System.Collections.Generic;
                                      using ACCR;
                                      
-                                     public partial class {{classSymbol.Name}} : {{resolverInterface}} 
+                                     namespace {{classSymbol.ContainingNamespace?.ToDisplayString()}}
                                      {
-                                         public event ResolverEventHandler OnFire;
-                                         public List<{{aspectInterface}}> Aspects {get; set;}
-                                         public List<{{observerInterface}}> Observers { get; set; }
-                                         
-                                         public void Initialize()
+                                         public partial class {{classSymbol.Name}} : {{resolverInterface}} 
                                          {
-                                             Aspects = new List<{{aspectInterface}}>();
-                                             Observers = new List<{{observerInterface}}>();
-                                             {{GenerateActionInitializations(actions)}}
-                                         }
-                                         
-                                         public void AddAspect({{aspectInterface}} aspect)
-                                         {
-                                             Aspects.Add(aspect);
-                                         }
-                                         
-                                         public void AddAspects(List<{{aspectInterface}}> aspects)
-                                         {
-                                             foreach (var aspect in aspects)
+                                             public event ResolverEventHandler OnFire;
+                                             public List<{{aspectInterface}}> Aspects {get; set;}
+                                             public List<{{observerInterface}}> Observers { get; set; }
+                                             
+                                             public void Initialize()
                                              {
-                                                Aspects.Add(aspect);
+                                                 Aspects = new List<{{aspectInterface}}>();
+                                                 Observers = new List<{{observerInterface}}>();
+                                                 {{GenerateActionInitializations(actions)}}
                                              }
-                                         }
-                                         
-                                         public void RemoveAspect({{aspectInterface}} aspect)
-                                         {
-                                            Aspects.Remove(aspect);
-                                         }
-                                         
-                                         public void Register({{observerInterface}} observer)
-                                         {
-                                            Observers.Add(observer);
-                                         }
-                                         
-                                         public void Unregister({{observerInterface}} observer)
-                                         {
-                                            Observers.Remove(observer);
-                                         }
-                                         
-                                         public void Fire<T>({{infoInterface}}<T> info)
-                                         {
-                                             foreach (var aspect in Aspects)
+                                             
+                                             public void AddAspect({{aspectInterface}} aspect)
                                              {
-                                                 if(OnFire is not null)
+                                                 Aspects.Add(aspect);
+                                             }
+                                             
+                                             public void AddAspects(List<{{aspectInterface}}> aspects)
+                                             {
+                                                 foreach (var aspect in aspects)
                                                  {
-                                                    OnFire(this, EventArgs.Empty, aspect, info);
+                                                    Aspects.Add(aspect);
                                                  }
                                              }
-                                             Notify(info);
-                                         }
-                                         
-                                         public void Notify<T>({{infoInterface}}<T> info)
-                                         {
-                                            foreach (var observer in Observers)
-                                            {
-                                                observer.OnNotify(info);
-                                            }
+                                             
+                                             public void RemoveAspect({{aspectInterface}} aspect)
+                                             {
+                                                Aspects.Remove(aspect);
+                                             }
+                                             
+                                             public void Register({{observerInterface}} observer)
+                                             {
+                                                Observers.Add(observer);
+                                             }
+                                             
+                                             public void Unregister({{observerInterface}} observer)
+                                             {
+                                                Observers.Remove(observer);
+                                             }
+                                             
+                                             public void Fire<T>({{infoInterface}}<T> info)
+                                             {
+                                                 foreach (var aspect in Aspects)
+                                                 {
+                                                     if(OnFire is not null)
+                                                     {
+                                                        OnFire(this, EventArgs.Empty, aspect, info);
+                                                     }
+                                                 }
+                                                 Notify(info);
+                                             }
+                                             
+                                             public void Notify<T>({{infoInterface}}<T> info)
+                                             {
+                                                foreach (var observer in Observers)
+                                                {
+                                                    observer.OnNotify(info);
+                                                }
+                                             }
                                          }
                                      }
                                      """;

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roryb\\Documents\\GitHub\\IRDIAH\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj": {}
+    "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roryb\\Documents\\GitHub\\IRDIAH\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj": {
+    "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\IRDIAH\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj",
+        "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj",
         "projectName": "ACCRSourceGenerators.Sample",
-        "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\IRDIAH\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj",
+        "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\ACCRSourceGenerators.Sample.csproj",
         "packagesPath": "C:\\Users\\roryb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\IRDIAH\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\obj\\",
+        "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators.Sample\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\roryb\\AppData\\Roaming\\NuGet\\NuGet.Config"
