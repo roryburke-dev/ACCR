@@ -1,4 +1,4 @@
-﻿namespace Utils
+﻿namespace ACCR.Utils
 {
     public interface IStateMachine
     {

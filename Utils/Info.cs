@@ -1,9 +1,6 @@
-﻿namespace Utils
+﻿namespace ACCR.Utils
 {
-    public abstract class Info
-    {
-        
-    }
+    public abstract class Info {}
 
     public class Info<T> : Info
     {

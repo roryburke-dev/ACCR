@@ -1,6 +1,6 @@
 ﻿using System.Collections.Generic;
 
-namespace Utils
+namespace ACCR.Utils
 {
     public interface IObservable
     {
