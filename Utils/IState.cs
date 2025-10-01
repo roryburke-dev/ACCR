@@ -1,11 +1,10 @@
 ﻿using System;
-using ACCR;
 
-namespace Utils
+namespace ACCR.Utils
 {
     public interface IState
     {
-        public ICoordinator Coordinator { get; set; }
+        public ACCR.ICoordinator? Coordinator { get; set; }
         public event EnterEventHandler OnEnter;
         public event ExecuteEventHandler OnExecute;
         public event ExitEventHandler OnExit;

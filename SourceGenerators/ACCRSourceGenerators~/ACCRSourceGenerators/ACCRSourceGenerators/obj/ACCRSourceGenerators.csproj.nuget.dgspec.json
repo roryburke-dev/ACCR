@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj": {}
+    "C:\\Users\\roryb\\Documents\\GitHub\\Birbdefense\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj": {}
   },
   "projects": {
-    "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj": {
+    "C:\\Users\\roryb\\Documents\\GitHub\\Birbdefense\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
+        "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\Birbdefense\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
         "projectName": "ACCRSourceGenerators",
-        "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
+        "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\Birbdefense\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
         "packagesPath": "C:\\Users\\roryb\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\ItRainsDownIronAndHope_Prototype\\Assets\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\obj\\",
+        "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\Birbdefense\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\roryb\\AppData\\Roaming\\NuGet\\NuGet.Config"

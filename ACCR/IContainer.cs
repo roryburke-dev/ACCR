@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace ACCR
+namespace ACCR.ACCR
 {
     public interface IContainer
     {
@@ -13,5 +13,6 @@ namespace ACCR
         public T GetAspect<T>() where T : struct;
                                          
         public Dictionary<Type, IAspect> GetAllAspects();
+        public void UpdateAspect(IAspect aspect);
     }
 }

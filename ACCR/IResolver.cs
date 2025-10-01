@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using Utils;
+using ACCR.Utils;
 
-namespace ACCR
+namespace ACCR.ACCR
 {
     public interface IResolver : IObservable
     {

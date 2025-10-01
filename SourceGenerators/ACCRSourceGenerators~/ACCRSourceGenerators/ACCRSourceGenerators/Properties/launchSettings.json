@@ -3,7 +3,7 @@
   "profiles": {
     "DebugRoslynSourceGenerator": {
       "commandName": "DebugRoslynComponent",
-      "targetProject": "../ACCRSourceGenerators.Sample/ACCRSourceGenerators.Sample.csproj"
+      "targetProject": "../ACCRSourceGenerators/ACCRSourceGenerators.csproj"
     }
   }
 }

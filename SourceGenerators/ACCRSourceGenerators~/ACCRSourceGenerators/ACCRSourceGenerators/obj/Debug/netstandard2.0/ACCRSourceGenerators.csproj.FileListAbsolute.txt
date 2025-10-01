@@ -48,3 +48,14 @@ C:\Users\roryb\Documents\GitHub\ItRainsDownIronAndHope_Prototype\Assets\SourceGe
 C:\Users\roryb\Documents\GitHub\ItRainsDownIronAndHope_Prototype\Assets\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.csproj.CoreCompileInputs.cache
 C:\Users\roryb\Documents\GitHub\ItRainsDownIronAndHope_Prototype\Assets\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.dll
 C:\Users\roryb\Documents\GitHub\ItRainsDownIronAndHope_Prototype\Assets\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.pdb
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\bin\Debug\netstandard2.0\ACCRSourceGenerators.deps.json
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\bin\Debug\netstandard2.0\ACCRSourceGenerators.dll
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\bin\Debug\netstandard2.0\ACCRSourceGenerators.pdb
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.csproj.AssemblyReference.cache
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.AssemblyInfoInputs.cache
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.AssemblyInfo.cs
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.csproj.CoreCompileInputs.cache
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.sourcelink.json
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.dll
+C:\Users\roryb\Documents\GitHub\Birbdefense\Assets\ACCR\SourceGenerators\ACCRSourceGenerators~\ACCRSourceGenerators\ACCRSourceGenerators\obj\Debug\netstandard2.0\ACCRSourceGenerators.pdb
