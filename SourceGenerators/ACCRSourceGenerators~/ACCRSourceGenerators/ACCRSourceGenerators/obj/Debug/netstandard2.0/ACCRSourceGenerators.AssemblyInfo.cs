@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ACCRSourceGenerators")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+e36c06210f736a4284550478132c5c77b9d06073")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+c4bf9effdf7ff0f273aa6eafbaaa47185209cf92")]
 [assembly: System.Reflection.AssemblyProductAttribute("ACCRSourceGenerators")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ACCRSourceGenerators")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

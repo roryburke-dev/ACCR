@@ -103,15 +103,15 @@ public class CoordinatorGenerator : ISourceGenerator
                                           
                                           public void ChangeState({{stateInterface}} newState)
                                           {
-                                              CurrentState.Exit();
+                                              CurrentState?.Exit();
                                               PreviousState = CurrentState;
                                               CurrentState = newState;
-                                              CurrentState.Enter();
+                                              CurrentState?.Enter();
                                           }
                                           
                                           public void UpdateState()
                                           {
-                                              CurrentState.Execute();
+                                              CurrentState?.Execute();
                                           }
                                           
                                           public {{infoInterface}}<T> OnNotify<T>({{infoInterface}}<T> info)
