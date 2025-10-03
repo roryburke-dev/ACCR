@@ -86,7 +86,7 @@ public class ContainerGenerator : ISourceGenerator
     private static string GenerateAspectUpdateSwitchStatement(List<IFieldSymbol> aspects)
     {
         var builder = new StringBuilder();
-        builder.AppendLine("switch(aspect.GetType().ToString())");
+        builder.AppendLine("switch(aspect.Id)");
         builder = Utils.Indent(builder, 3);
         builder.AppendLine("{");
         foreach (var field in aspects)
@@ -94,7 +94,7 @@ public class ContainerGenerator : ISourceGenerator
             var fieldName = field.Name.Replace("_", "");
             fieldName = char.ToUpper(fieldName[0]) + fieldName.Substring(1);
             builder = Utils.Indent(builder, 4);
-            builder.AppendLine($"case \"{field.Type}\":");
+            builder.AppendLine($"case \"{field.Name.Split('.').LastOrDefault()?.Replace("_", "").ToUpper()}\":");
             builder = Utils.Indent(builder, 5);
             builder.AppendLine($"Update{fieldName}(({field.Type})aspect);");
             builder = Utils.Indent(builder, 5);
