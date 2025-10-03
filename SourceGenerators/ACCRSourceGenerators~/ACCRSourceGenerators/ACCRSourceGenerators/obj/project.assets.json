@@ -1756,11 +1756,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
+      "projectUniqueName": "C:\\Users\\roryb\\Documents\\GitHub\\RPG\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
       "projectName": "ACCRSourceGenerators",
-      "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
+      "projectPath": "C:\\Users\\roryb\\Documents\\GitHub\\RPG\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\ACCRSourceGenerators.csproj",
       "packagesPath": "C:\\Users\\roryb\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\obj\\",
+      "outputPath": "C:\\Users\\roryb\\Documents\\GitHub\\RPG\\Assets\\ACCR\\SourceGenerators\\ACCRSourceGenerators~\\ACCRSourceGenerators\\ACCRSourceGenerators\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\roryb\\AppData\\Roaming\\NuGet\\NuGet.Config"
