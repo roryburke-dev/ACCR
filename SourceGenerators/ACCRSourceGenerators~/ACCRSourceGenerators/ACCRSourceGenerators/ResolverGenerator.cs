@@ -99,6 +99,54 @@ public class ResolverGenerator : ISourceGenerator
                                               Notify(info);
                                           }
                                           
+                                          public void Fire<X,Y>({{infoInterface}}<X> infoX, {{infoInterface}}<Y> infoY)
+                                          {
+                                              foreach (var aspect in Aspects)
+                                              {
+                                                  if(OnFire is not null)
+                                                  {
+                                                     OnFire(this, EventArgs.Empty, aspect, infoX);
+                                                     Notify(infoY);
+                                                  }
+                                              }
+                                              Notify(infoX);
+                                          }
+                                          
+                                          public void Fire<T>({{aspectInterface}} aspect, {{infoInterface}}<T> info)
+                                          {
+                                              if(OnFire is not null)
+                                              {
+                                                  OnFire(this, EventArgs.Empty, aspect, info);
+                                              }
+                                              Notify(info);
+                                          }
+                                          
+                                          public void Fire<T>(List<{{aspectInterface}}> aspects, {{infoInterface}}<T> info)
+                                          {
+                                              foreach (var aspect in aspects)
+                                              {
+                                                  if(OnFire is not null)
+                                                  {
+                                                      OnFire(this, EventArgs.Empty, aspect, info);
+                                                  }
+                                              }
+                                              Notify(info);
+                                          }
+                                  
+                                          
+                                          public void Fire<X,Y>(List<{{aspectInterface}}> aspects, {{infoInterface}}<X> infoX, {{infoInterface}}<Y> infoY)        
+                                          {
+                                              foreach (var aspect in aspects)
+                                              {
+                                                  if(OnFire is not null)
+                                                  {
+                                                      OnFire(this, EventArgs.Empty, aspect, infoX);
+                                                      Notify(infoY);
+                                                  }
+                                              }
+                                              Notify(infoX);
+                                          }
+                                          
                                           public void Notify<T>({{infoInterface}}<T> info)
                                           {
                                              foreach (var observer in Observers)

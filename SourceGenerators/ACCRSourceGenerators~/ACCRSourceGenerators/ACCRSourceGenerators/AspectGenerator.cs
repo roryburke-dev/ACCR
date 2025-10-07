@@ -31,6 +31,7 @@ public class AspectGenerator : ISourceGenerator
             return;
         var aspectInterface = context.Compilation.GetTypeByMetadataName("ACCR.ACCR.IAspect");
         var containerInterface = context.Compilation.GetTypeByMetadataName("ACCR.ACCR.IContainer");
+        
         foreach (var structSymbol in receiver.Aspects)
         {
             var fields = receiver.Fields[structSymbol];
@@ -48,10 +49,10 @@ public class AspectGenerator : ISourceGenerator
                                        [StructLayout(LayoutKind.Auto)]
                                        public partial struct {{structSymbol.Name}} : {{aspectInterface}} 
                                        {
-                                           public string Id {get; set;}
+                                           public int Id {get; set;}
                                            public {{containerInterface}} Container {get; set;}
                                            
-                                           public void Initialize<T>(string id, {{containerInterface}} container, T data)
+                                           public void Initialize<T>(int id, {{containerInterface}} container, T data)
                                            {
                                                Id = id;
                                                InitializeContainer(container);
